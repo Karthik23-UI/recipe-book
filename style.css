@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Edu+SA+Beginner:wght@700&family=Kalam:wght@300;400;700&family=Lobster&family=Quicksand:wght@300&display=swap');
+body, h1, h2, ul, li, p, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.7)),url(images/dish3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Navigation */
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0%;
+    left: 0%;
+    background: rgba(0, 0,0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+nav .logo img{
+       width: 60px;
+       cursor: pointer;
+}
+.logo{
+    padding-right: 60%;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;   
+}
+
+nav ul li a::after{
+content: '';
+width: 0;
+height: 2px;
+background: rgba(255, 30, 0, 0.956) ;
+display: block;
+transition: 0.2s linear;
+}
+
+nav ul li a:hover::after{
+    width: 100%;   
+}
+
+nav ul li a:hover{
+    color:  rgba(255, 30, 0, 0.956);
+}
+
+.head p{
+    color: aliceblue;
+    text-align: center;
+    padding-top: 13%;   
+    font-size: 50px; 
+    font-family: 'Lobster', cursive;
+    letter-spacing: 0.2rem;
+}
+
+ p{
+    color: aliceblue;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 500px;
+}
+
+.design{
+    padding-top: 10%;
+}
+
+   /* recipe section */
+
+
+.card-row {
+    display: flex;
+    justify-content: space-evenly; 
+    padding: 20px;
+  }
+  .card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    border-radius: 20px;
+     border: 2px solid rgba(255, 30, 0, 0.956);
+  }
+  .perfect:hover > .card {
+    cursor: pointer;
+    transform: rotateY(180deg);
+  }
+  .card-front, .card-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    color: rgba(255, 30, 0, 0.956);
+    backface-visibility: hidden;
+  }
+  .card-front{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+  .card-front img{
+    width: 170px;
+    height: 170px;
+    margin-left: 21%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .card-back {
+    background-color: rgb(247, 47, 47);
+    border-radius: 18px;
+    transform: rotateY(180deg);
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+  }
+  .card-back p{
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .card-front h1{
+    color: rgba(255, 30, 0, 5);
+    text-align: center;
+    margin: 23px;
+    font-size: 25px;
+  }
+ .card-back .btn{
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    font-weight: 300px;
+    background-color: black;
+    width: 160px;
+    padding: 10px;
+    margin-top: auto;
+    margin-left: 19%;
+    margin-bottom: 30px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 10px; 
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.3s;
+  }
+  .card-back a:hover, .card-back a:focus, .card-back a:active{
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+
+}
+.heading{
+    padding-top: 30%;
+    padding-bottom: 10%;
+    text-align: center;
+    color: rgba(255, 30, 0, 0.956);
+}
+.heading2{
+    text-align: center;
+    color: rgba(255, 30, 0, 0.956);
+    padding: 10%;
+}
+.heading3{
+    text-align: center;
+    padding: 10%;
+    color: rgba(255, 30, 0, 0.956);
+}
+.common{
+    font-size: 30px;
+    font-family: "kalam", sans-serif;
+    text-transform: uppercase;
+}
+/* contact section */
+
+.contact-container {
+    padding-top: 10%;
+    display: flex;
+    justify-content: space-evenly;
+   align-items: center;
+}
+.contact-form {
+    width: 30%;
+    padding-bottom: 10%;
+}
+.contact-form h2 {
+    font-size: 30px;
+    padding-bottom: 40px;
+    text-align: center;
+    color: rgba(255, 30, 0, 0.956);
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+label {
+    font-weight: bold;
+    text-align: left;
+    padding-bottom: 10px;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+button {
+    background-color:rgba(255, 30, 0, 0.836);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.footer{
+    background-color: rgb(218, 66, 20);
+    text-align: center;
+    padding: 20px;
+    color: beige;
+}
+.box{
+    padding: 10px;
+    border-radius: 10px;
+}
+@media screen and (max-width: 600px){
+    nav .logo img{
+        width: 50px;
+        cursor: pointer;
+ }
+ nav ul li{
+    display: inline-block;
+
+}
+body{
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.7)),url(images/dish3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100vh;
+}
+}

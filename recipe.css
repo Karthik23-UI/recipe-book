@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Cinzel:wght@500&family=Dancing+Script:wght@500&family=Edu+SA+Beginner:wght@700&family=Kalam:wght@300;400;700&family=Lobster&family=Montserrat:wght@300;500&family=Quicksand:wght@300&display=swap');
+section{
+    width: 100%;
+    height: 100vh;   
+}
+html{
+  scroll-behavior: smooth;
+}
+section nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    right: 0%;
+    left: 0%;
+    background: rgba(0, 0,0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+section nav .logo img{
+       width: 60px;
+       cursor: pointer;
+}
+.logo{
+    padding-right: 60%;
+}
+section nav ul{
+    list-style: none;
+}
+section nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+section nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 17px;   
+}
+section nav ul li a::after{
+content: '';
+width: 0;
+height: 2px;
+background: rgba(255, 30, 0, 0.956) ;
+display: block;
+transition: 0.2s linear;
+}
+section nav ul li a:hover::after{
+    width: 100%;   
+}
+section nav ul li a:hover{
+    color:  rgba(255, 30, 0, 0.956);
+}
+.page {
+    width: 90vw;
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+  .page {
+    padding-top: 2rem;
+    min-height: calc(100vh - (6rem + 4rem));
+  }
+  @media screen and (min-width: 1200px) {
+    .recipe h5 {
+      font-size: 1.15rem;
+    }
+    .recipes-list {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  .recipe-hero {
+    display: grid;
+    gap: 3rem;
+  }
+  .recipe-hero-img {
+    height: 300px;
+    border-radius: var(--borderRadius);
+  }
+  .recipe-info p {
+    color: var(--grey-600);
+    line-height: 1.8; 
+    text-align: justify;
+    font-family: 'Montserrat', sans-serif;
+
+  }
+  .recipe-info h2{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 300px;
+    color: rgba(255, 30, 0, 0.956);
+  }
+  .recipe-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .recipe-icons i {
+    font-size: 1.5rem;
+    color: var(--primary-500);
+  }
+  .recipe-icons h5,
+  .recipe-icons p {
+    margin-bottom: 0;
+    font-size: 0.85em;
+  }
+  .recipe-icons p {
+    color: var(--grey-600);
+  }
+  .recipe-tags {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+  .recipe-tags a {
+    background: var(--primary-500);
+    border-radius: var(--borderRadius);
+    color: var(--white);
+    padding: 0.05rem 0.5rem;
+    margin: 0 0.25rem;
+    text-transform: capitalize;
+  }
+  @media screen and (min-width: 992px) {
+    .recipe-hero {
+      grid-template-columns: 4fr 5fr;
+      align-items: center;
+    }
+  }
+  .recipe-content {
+    /* padding: 3rem 0; */
+    display: grid;
+    gap: 2rem 5rem;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .recipe-content h4{
+    color: rgba(255, 30, 0, 0.956);
+  }
+  .recipe-content h4{
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+  }
+  @media screen and (min-width: 992px) {
+    .recipe-content {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+  .single-instruction header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .single-instruction header p {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--primary-500);
+    margin-bottom: 0;
+  }
+  .single-instruction > p {
+    color: var(--grey-700);
+  }
+  .single-instruction p{
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .single-instruction header div {
+    height: 2px;
+    background: var(--grey-300);
+  }
+  .second-column {
+    display: grid;
+  }
+  .single-ingredient {
+    border-bottom: 2px solid var(--grey-300);
+    color: var(--grey-700);
+    font-family: 'Montserrat', sans-serif;
+  }
+  .single-tool {
+    border-bottom: 2px solid var(--grey-300);
+    color: var(--primary-500);
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif;
+  }
